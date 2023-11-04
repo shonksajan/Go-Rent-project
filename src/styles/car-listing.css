@@ -1,0 +1,24 @@
+/* car-item.css */
+.car-listing {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .car-card {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .car-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .car-name {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
