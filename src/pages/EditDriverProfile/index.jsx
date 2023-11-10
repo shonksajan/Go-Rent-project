@@ -125,6 +125,15 @@ function EditDriverProfile() {
           />
         </div>
         <div className="form-item2">
+          <label>Rate:</label>
+          <Input
+            value={editedData.rate || driverData.rate}
+            onChange={(e) =>
+              setEditedData({ ...editedData, rate: e.target.value })
+            }
+          />
+        </div>
+        <div className="form-item2">
           <label>License Plate:</label>
           <Input
             value={editedData.licensePlate || driverData.licensePlate}

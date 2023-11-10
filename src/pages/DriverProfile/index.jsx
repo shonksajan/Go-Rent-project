@@ -97,6 +97,7 @@ function DriverProfile() {
                 <p>Car name</p>
                 <p>Car model</p>
                 <p>Seats</p>
+                <p>Rate</p>
                 <p>License plate</p>
                 <p>Chassis number</p>
               </div>
@@ -104,6 +105,7 @@ function DriverProfile() {
                 <p>{el.carName}</p>
                 <p>{el.carModel}</p>
                 <p>{el.seats}</p>
+                <p>{el.rate}</p>
                 <p>{el.licensePlate}</p>
                 <p>{el.chassisNumber}</p>
               </div>

@@ -21,6 +21,8 @@ function RegistrationForm() {
     carName: "",
     carModel: "",
     seats: "",
+    rate:"",
+    acType:"",
     licensePlate: "",
     chassisNumber: "",
 
@@ -266,6 +268,31 @@ function RegistrationForm() {
             </div>
             <div className="form-group">
               <label>
+                Rate :<span className="required">*</span>
+              </label>
+              <input
+                type="number"
+                name="rate"
+                value={formData.rate}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group"><label>
+    Choose AC/Non-AC:<span className="required">*</span>
+  </label><br/>
+  <select
+    name="acType"
+    value={formData.acType}
+    onChange={handleChange}
+    required
+  >
+    <option value="AC">AC</option>
+    <option value="Non-AC">Non-AC</option>
+  </select>
+  </div>
+            <div className="form-group">
+              <label>
                 License Plate Number:<span className="required">*</span>
               </label>
               <input
@@ -305,7 +332,7 @@ function RegistrationForm() {
 
           <div className="form-group">
   <label>
-    Additional Image:<span className="required">*</span>
+    Car Image:<span className="required">*</span>
   </label>
   <input
     type="file"

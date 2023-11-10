@@ -337,6 +337,8 @@ app.post(
       carName,
       carModel,
       seats,
+      rate,
+      acType,
       licensePlate,
       chassisNumber,
       accountNumber,
@@ -362,8 +364,8 @@ app.post(
 
     try {
       const userInsertSql = `
-        INSERT INTO taxi_driver (firstName, lastName, phone, address, email, password, carName, carModel, seats, licensePlate, chassisNumber, accountNumber, accountName, ifscCode)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO taxi_driver (firstName, lastName, phone, address, email, password, carName, carModel, seats, rate,,acType,licensePlate, chassisNumber, accountNumber, accountName, ifscCode)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)
       `;
       const userInsertValues = [
         firstName,
@@ -375,6 +377,8 @@ app.post(
         carName,
         carModel,
         seats,
+        rate,
+        acType,
         licensePlate,
         chassisNumber,
         accountNumber,
@@ -451,7 +455,7 @@ app.post("/api/taxi/login", async (req, res) => {
 app.get('/api/driver/:id', (req, res) => {
  
   const id = req.params['id'];
-  const sql = "SELECT taxi_driver.*, documents.prof FROM taxi_driver INNER JOIN documents ON taxi_driver.id = documents.user_id where taxi_driver.id = ?";
+  const sql = "SELECT * FROM taxi_driver  where taxi_driver.id = ?";
   const value = [id];
   pool.query(sql, value, (err, result) => {
     if (err) {
@@ -483,6 +487,8 @@ app.post('/api/driver/update/:id', async (req, res) => {
           carName = ?,
           carModel = ?,
           seats = ?,
+          rate= ?,
+          acType = ?,
           licensePlate = ?,
           chassisNumber = ?,
           accountNumber = ?,
@@ -500,6 +506,8 @@ app.post('/api/driver/update/:id', async (req, res) => {
       updatedData.carName,
       updatedData.carModel,
       updatedData.seats,
+      updatedData.rate,
+      updatedData.acType,
       updatedData.licensePlate,
       updatedData.chassisNumber,
       updatedData.accountNumber,
@@ -609,7 +617,7 @@ app.get('/download/pollution_certificate/:pdfId', (req, res) => {
 
 app.get('/api/carlist', (req, res) => {
   const sql = `
-    SELECT taxi_driver.carModel, taxi_driver.carName, taxi_driver.seats, documents.additional_image FROM taxi_driver INNER JOIN documents ON taxi_driver.id = documents.user_id`;
+    SELECT taxi_driver.carModel, taxi_driver.carName, taxi_driver.seats, taxi_driver.rate,taxi_driver.acType, documents.additional_image FROM taxi_driver INNER JOIN documents ON taxi_driver.id = documents.user_id`;
 
   pool.query(sql, (err, result) => {
     if (err) {

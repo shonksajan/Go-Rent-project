@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./card.css";
 
 const Card = (props) => {
-  const { imgUrl, model, carName, automatic, speed, price } = props.item;
+  const { imgUrl, model, carName, seats, acType, rate } = props.item;
 
   // Define the custom styles for the card
   const cardStyle = {
@@ -28,18 +28,18 @@ const Card = (props) => {
         <div className="car__item-content mt-4">
           <h4 className="section__title text-center">{carName}</h4>
           <h6 className="rent__price text-center mt-">
-            ₹{price} <span>/ Day</span>
+            ₹{rate} <span>/ Day</span>
           </h6>
 
           <div className="car__item-info d-flex align-items-center justify-content-between mt-3 mb-4">
             <span className="d-flex align-items-center gap-1">
-              <i className="ri-car-line"></i> {model}
+            <i className="ri-car-line"></i> {model}
             </span>
             <span className="d-flex align-items-center gap-1">
-              <i className="ri-settings-2-line"></i> {automatic}
+              <i className="ri-settings-2-line"></i> {seats}
             </span>
             <span className="d-flex align-items-center gap-1">
-              <i className="ri-timer-flash-line"></i> {speed}
+              <i className="ri-timer-flash-line"></i> {acType}
             </span>
           </div>
 <div className="d-flex align-items-center w-100 justify-content-center">

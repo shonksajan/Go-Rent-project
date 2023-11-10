@@ -35,7 +35,9 @@ function CarList(){
             item={{
               imgUrl: el.additional_image,
               carName: el.carName,
-              
+              rate:el.rate,
+              seats:el.seats,
+              acType:el.acType,
               model: el.carModel,
              
             }}
