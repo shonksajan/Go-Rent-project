@@ -2,7 +2,8 @@ import React, { useState, useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
-
+import {LogoutOutlined} from "@ant-design/icons"
+import { useNavigate } from "react-router-dom/dist/umd/react-router-dom.development";
 const navLinks = [
   {
     path: "/home",
@@ -17,7 +18,7 @@ const navLinks = [
     display: "Cars",
   },
   {
-    path: "/Taxi",
+    path: "/taxicars",
     display: "Taxicars",
   },
   {
@@ -27,6 +28,7 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const nav = useNavigate();
   const [showLoginDropdown, setShowLoginDropdown] = useState(false);
   const [showRegisterDropdown, setShowRegisterDropdown] = useState(false);
 
@@ -42,6 +44,11 @@ const Header = () => {
 
   const toggleMenu = () => menuRef.current.classList.toggle("menu__active");
 
+  const logout=()=>{
+    localStorage.clear();
+    nav("/taxi-driver-login")
+  }
+
   return (
     <header className="header">
       <div className="header__top">
@@ -55,7 +62,11 @@ const Header = () => {
                 </span>
               </div>
             </Col>
-
+{localStorage.getItem("userid")?(
+  <div >
+             <button onClick={()=>{logout()}} className="logout" style={{width:"100px", float:"Right", fontSize:"14px", background:"none"}}><LogoutOutlined /> Logout</button>
+             </div>
+           ):(
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
                 <div className="login-dropdown" onClick={toggleLoginDropdown}>
@@ -66,7 +77,7 @@ const Header = () => {
                     <div className="login-options">
                       <Link to="/login">Login as Admin</Link>
                       <br></br>
-                      <Link to="/user-login">Login as User</Link>
+                      <Link to="/userlogin">Login as User</Link>
                       <br></br>
                       <Link to="/taxi-driver-login">Login as Taxi Driver</Link>
                     </div>
@@ -79,23 +90,19 @@ const Header = () => {
                   </Link>
                   {showRegisterDropdown && (
                     <div className="register-options">
-                      <Link to="/register-as-user">Register as User</Link>
+                      <Link to="/usersignin">Register as User</Link>
                       <br></br>
-                      <Link to="/register-as-taxi-driver">Register as Taxi Driver</Link>
+                      <Link to="/register/taxi-driver">Register as Taxi Driver</Link>
                     </div>
                   )}
                 </div>
               </div>
             </Col>
+)}
           </Row>
         </Container>
       </div>
 
-      <div className="header__middle">
-        <Container>
-          {/* ... (Rest of your code for the middle section) ... */}
-        </Container>
-      </div>
 
       <div className="main__navbar">
         <Container>
@@ -122,7 +129,7 @@ const Header = () => {
 
             <div className="nav__right">
               <div className="search__box">
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search" style={{border:"none"}}/>
                 <span>
                   <i className="ri-search-line"></i>
                 </span>

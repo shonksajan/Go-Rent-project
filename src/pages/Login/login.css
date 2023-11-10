@@ -1,0 +1,30 @@
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .ant-col-rtl .login-form-forgot {
+  float: left;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+
+.login_card{
+  width:300px;
+  margin:30px;
+ 
+}
+
+.login-form-button{
+  width:100px;
+  height: 100%;
+  margin:0 20px 0;
+}
+
+.login_ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

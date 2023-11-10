@@ -1,0 +1,41 @@
+.bookinfo { 
+     /* padding: 50px 100px;  */
+    width: 30%;
+    /* height: 100vh; */
+  
+    background-color: white; 
+     
+     border: 1px solid #dfdfdf;
+   width: 400px;
+  margin:10px;
+   border-radius: 10px;
+    
+  }
+  .head-hist{
+    padding: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+ .b-info{
+  font-size: 20px;
+    font-weight: 600;
+
+ }
+ 
+ 
+  .title {
+   padding:3px;
+   border-bottom: 1px solid #dfdfdf;
+ } 
+ 
+ .title p {
+   margin: 0 0 12px;
+   margin-left: 7px;
+   padding-left: 10px;
+   color: rgb(72, 72, 72);
+   font-weight: 400;
+ }
+  

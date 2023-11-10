@@ -1,0 +1,101 @@
+
+.p-info {
+  padding: 50px 100px;
+  width: 50%;
+  /* height: 100vh; */
+
+  
+  /* border: 1px solid #dfdfdf; */
+}
+
+.main {
+  background-color: white;
+  display: flex;
+}
+
+.insurance h6 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.insurance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0;
+
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+}
+
+.card {
+  margin-top: 100px;
+  
+  padding: 20px;
+  background-color: white;
+}
+
+.dr {
+  font-weight: 600;
+  color: #007aff;
+}
+
+
+.car-details,
+.driver-details,
+.acc-details {
+  border: 3px solid #dfdfdf;
+  width: 550px;
+  border-radius: 10px;
+}
+
+.head-flex {
+  padding: 10px;
+  border-bottom: 2px solid #dfdfdf;
+}
+
+.v-info {
+  font-size: 15px;
+}
+
+.head-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  gap: 100px;
+
+  padding: 20px;
+}
+
+.car-details .driver-details .titles p {
+  margin: 0 0 12px;
+  color: rgb(72, 72, 72);
+  font-weight: 400;
+}
+
+.car-details .c-data p,
+.driver-details,
+.acc-details p {
+  margin: 0 0 12px;
+}
+
+.verified {
+  width: auto;
+  height: 20px;
+}
+.certi{
+  margin-top: 120px;
+  margin-left: 9px;
+ 
+}
+
+.acc-details{
+  margin-top: 10px;
+  
+}
+
