@@ -1,0 +1,97 @@
+/* .main-login{
+font-family: 'Roboto', sans-serif;
+width: 450px;
+padding-left: 250px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.error {
+    color: red;
+    margin-top: 5px;
+  } */
+
+  /* login.css */
+
+  .main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .main-login h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .main-login h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .main-login div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .main-login form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-login label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .main-login input[type="email"],
+  .main-login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .main-login .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .main-login button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .main-login button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .main-login button:hover {
+    background-color: #0056b3;
+  }
+  
+  .main-login a {
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  
+  .main-login a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,75 @@
+/* signin.css */
+
+.main-signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .main-signin h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .main-signin h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .main-signin form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .main-signin label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .main-signin input[type="text"],
+  .main-signin input[type="email"],
+  .main-signin input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .main-signin .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .main-signin button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .main-signin button:hover {
+    background-color: #0056b3;
+  }
+  
+  .main-signin center {
+    font-size: 1.2rem;
+  }
+  
