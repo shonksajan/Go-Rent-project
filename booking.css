@@ -1,0 +1,91 @@
+
+
+.container-booking {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booking-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .booking-form input[type="text"],
+  .booking-form input[type="tel"],
+  .booking-form select,
+  .booking-form input[type="date"],
+  .booking-form input[type="number"],
+  .booking-form input[type="file"],
+  .booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  
+  .booking-form input[type="file"] {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .booking-form select {
+    padding: 8px;
+  }
+  
+  .booking-form div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .booking-form div label {
+    margin-right: 10px;
+  }
+  
+  .booking-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .booking-form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .booking-form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .booking-form a {
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .booking-form a:hover {
+    text-decoration: underline;
+  }
+  
