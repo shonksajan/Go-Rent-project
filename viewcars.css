@@ -1,0 +1,63 @@
+.bac {
+  background-image: url('/src/admin/imgs/bac.jpg');
+  background-size: cover;
+  height: 100vh;
+  margin-top: 70px;
+  background-repeat: no-repeat;
+}
+
+/* Style the table */
+.responsive-table {
+  /*width: 70%;
+  max-width: 100px; /* Adjust the maximum width as needed */
+ 
+  background-color: #837c7c; /* Table background color */
+ 
+  margin: 2px;
+}
+
+/* Caption styling */
+.responsive-table header {
+  padding-top: 10px;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Table header */
+.styled-table thead {
+  background-color: #333; /* Header background color */
+  color: #000000; /* Header text color */
+}
+
+/* Table header cells */
+.styled-table th {
+  padding: 10px;
+  text-align: left;
+}
+
+
+/* Table data cells */
+.styled-table td {
+  padding: 2px;
+}
+
+/* Loading and error messages */
+.loading-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-error div {
+  padding: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.img2{
+  height: 80px;
+}
